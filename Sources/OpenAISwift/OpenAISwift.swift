@@ -30,7 +30,7 @@ public class OpenAISwift {
         let session:URLSession
         let authorizeRequest: (inout URLRequest) -> Void
         
-        public static func makeDefaultOpenAI(apiKey: String, baseURL = "https://api.openai.com") -> Self {
+        public static func makeDefaultOpenAI(apiKey: String, baseURL: String = "https://api.openai.com") -> Self {
             .init(baseURL: baseURL,
                   endpointPrivider: OpenAIEndpointProvider(source: .openAI),
                   session: .shared,
